@@ -1,14 +1,31 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { TutorialsListComponent } from './components/tutorials-list/tutorials-list.component';
-import { TutorialDetailsComponent } from './components/tutorial-details/tutorial-details.component';
-import { AddTutorialComponent } from './components/add-tutorial/add-tutorial.component';
+import { WorkflowComponent } from './workflow/workflow.component';
+import { AddworkflowComponent } from './workflow/addworkflow/addworkflow.component';
+import { ListworkflowComponent } from './workflow/listworkflow/listworkflow.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'tutorials', pathMatch: 'full' },
-  { path: 'tutorials', component: TutorialsListComponent },
-  { path: 'tutorials/:id', component: TutorialDetailsComponent },
-  { path: 'add', component: AddTutorialComponent }
+  { path: '', redirectTo: 'workflow', pathMatch: 'full' },
+
+
+  {
+    path: 'workflow',
+    component: WorkflowComponent,
+    children: [
+      {
+        path : '' , redirectTo:'/workflow/addworkflowComponent' , pathMatch : 'full'
+      },
+      
+      
+      { path: 'addworkflowComponent', component: AddworkflowComponent },
+      { path: 'listworkflowComponent', component: ListworkflowComponent },
+      
+        // Autres routes pour les enfants si nécessaires
+      
+
+   ]
+  },
+  
 ];
 
 @NgModule({

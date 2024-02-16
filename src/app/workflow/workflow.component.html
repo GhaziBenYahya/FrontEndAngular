@@ -1,0 +1,45 @@
+<div>
+    <!-- Ajoutez ces modifications à votre fichier HTML -->
+
+<nav class="navbar">
+    <a class="navbar-brand" href="#">
+      <img src="chemin_vers_votre_image.jpg" alt="Logo">
+      <span>Votre Texte de Logo</span>
+    </a>
+    <div class="navbar-nav">
+
+      <a href="#">Contact</a>
+    </div>
+  </nav>
+  
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <nav class="col-md-2 d-none d-md-block bg-dark sidebar">
+        <div class="sidebar-sticky">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="addworkflowComponent">
+                Add Workflow
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="listworkflowComponent">
+                Workflow List
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+  
+      <!-- Main content area -->
+      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+        <router-outlet></router-outlet>
+      </main>
+    </div>
+  </div>
+  
+
+
