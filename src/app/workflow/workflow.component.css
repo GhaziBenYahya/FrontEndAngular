@@ -1,102 +1,45 @@
-@import '~bootstrap/dist/css/bootstrap.css';
-/* Ajoutez ces styles à votre fichier CSS */
+.nav {
+  background: linear-gradient(90deg, #cdffd8, #94b9ff);
+  display: flex;
+  align-items: center;
+}
 
-/* Sidebar */
+
 .sidebar {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 100;
-    padding-top: 56px; /* Hauteur de la barre de navigation si elle est fixe en haut */
-    overflow-y: auto;
-    background-color: #333;
-    color: white;
-  }
+  width: 300px;
+  background: radial-gradient(circle at 0% 0%, #72a5e8, #f6f4f8);
+  color: #fff;
+  padding: 20px;
+  height: 100vh;
   
-  .sidebar-sticky {
-    position: relative;
-    top: 0;
-    height: calc(100vh - 56px); /* Ajustez en fonction de la hauteur de la barre de navigation */
-    padding-top: 20px;
-    overflow-x: hidden;
-    overflow-y: auto;
-  }
-  
-  /* Sidebar Links */
-  .sidebar a {
-    padding: 10px;
-    text-decoration: none;
-    font-size: 16px;
-    color: #fff;
-    display: block;
-    transition: background 0.3s;
-  }
-  
-  .sidebar a:hover {
-    background-color: #555;
-  }
-  
-  /* Main Content */
-  main {
-    margin-left: 230px; /* Largeur de la barre latérale + espace de séparation */
-    padding: 20px;
-  }
-  
-  /* Responsive Styles */
-  @media (max-width: 768px) {
-    .sidebar {
-      margin-left: -230px; /* Cacher la barre latérale en mode mobile */
-    }
-    main {
-      margin-left: 0;
-    }
-  }
+}
 
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
 
-  /* Navbar */
-.navbar {
-    background-color: #333;
-    padding: 15px;
-  }
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #fff;
   
-  .navbar-brand img {
-    width: 40px; /* Ajustez la taille de l'image selon vos besoins */
-    height: auto;
-    margin-right: 10px;
-  }
+}
+.sidebar a:hover {
+  color: #ffcc00; /* Couleur au survol */
+}
+
+.test{
+  display: inline-flex;
+  background-color: #CDE8ED;
+}
+.add{
+  margin:inherit;
+  padding-top: 10px;
+  padding-left: 10px;
+  background-color: #CDE8ED;
   
-  .navbar-brand span {
-    color: white;
-    font-size: 20px;
-  }
-  
-  .navbar-nav {
-    margin-left: auto;
-  }
-  
-  .navbar-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    margin-right: 15px;
-    font-size: 16px;
-  }
-  
-  .navbar-nav a:hover {
-    background-color: #555;
-  }
-  
-  /* Responsive Styles */
-  @media (max-width: 768px) {
-    .navbar-nav {
-      display: flex;
-      flex-direction: column;
-    }
-  
-    .navbar-nav a {
-      margin-right: 0;
-      margin-bottom: 10px;
-    }
-  }
-  
+}

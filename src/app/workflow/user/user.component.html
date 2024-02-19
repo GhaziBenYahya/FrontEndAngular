@@ -1,0 +1,32 @@
+
+<div class="container">
+
+<form [formGroup]="user" (ngSubmit)="onSubmit()">
+    <label for="role">Role:</label>
+    <select formControlName="role">
+      <option *ngFor="let role of roles" [value]="role">{{ role }}</option>
+    </select>
+  
+    <label for="nom">Nom:</label>
+    <input type="text" formControlName="nom">
+  
+    <label for="prenom">Prénom:</label>
+    <input type="text" formControlName="prenom">
+  
+    <label for="motDePasse">Mot de passe:</label>
+    <input type="password" formControlName="motDePasse">
+  
+    <label for="mail">Mail:</label>
+    <input type="email" formControlName="mail">
+  
+    <label for="photo">Photo:</label>
+    <input type="file" id="photo" name="photo" (change)="onFileChange($event)" accept="image/*">
+    <div *ngIf="user.get('photo')?.invalid && user.get('photo')?.touched">
+      Merci d'importer une photo valide! 
+    </div>
+  
+    <label><input type="checkbox" formControlName="acceptData"> Je confirme et j'accepte </label>
+  <br>
+    <button type="submit" [disabled]="user.invalid">Submit</button>
+  </form>
+</div>

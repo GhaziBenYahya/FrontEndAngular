@@ -1,45 +1,48 @@
-<div>
-    <!-- Ajoutez ces modifications à votre fichier HTML -->
-
-<nav class="navbar">
-    <a class="navbar-brand" href="#">
-      <img src="chemin_vers_votre_image.jpg" alt="Logo">
-      <span>Votre Texte de Logo</span>
-    </a>
-    <div class="navbar-nav">
-
-      <a href="#">Contact</a>
-    </div>
-  </nav>
-  
-</div>
-
-<div class="container-fluid">
-    <div class="row">
-      <!-- Sidebar -->
-      <nav class="col-md-2 d-none d-md-block bg-dark sidebar">
-        <div class="sidebar-sticky">
-          <ul class="nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link" routerLink="addworkflowComponent">
-                Add Workflow
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="listworkflowComponent">
-                Workflow List
-              </a>
-            </li>
-          </ul>
+    
+    <div class="nav">
+      <nav class="navbar navbar-expand-sm ">
+        <div class="container-fluid">
+          <a routerLink="dashbordComponent">
+            <img src="assets/m1.png" alt="Logo" style="width: 70px; height: 60px;">
+          </a>
         </div>
       </nav>
-  
-      <!-- Main content area -->
-      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+      </div>
+      <body>
+      <div class="test">
+      <div class="sidebar">
+        <ul>
+          <li><a class="nav-link" routerLink="dashbordComponent">
+            Tableau de bord
+          </a></li>
+          <li><a class="nav-link" routerLink="addworkflowComponent">
+            Ajouter un workflow
+          </a></li>
+          <li><a class="nav-link" routerLink="listworkflowComponent">
+            Liste des workflow 
+          </a></li>
+          <li><a class="nav-link" routerLink="userComponent">
+            Ajouter un utilisateur
+          </a></li>
+          <li><a class="nav-link" routerLink="">
+            Ajouter une règle
+          </a></li>
+          <li><a class="nav-link" routerLink="">
+            Liste des utilisateurs
+          </a></li>
+          <li><a class="nav-link" routerLink="">
+            Profile
+          </a></li>
+          <li><a class="nav-link" routerLink="">
+            Aide
+          </a></li>
+        </ul>
+      </div>
+      <div class="add">
         <router-outlet></router-outlet>
-      </main>
-    </div>
-  </div>
-  
+        
+      </div>
+      </div>
+      <div>
 
 
