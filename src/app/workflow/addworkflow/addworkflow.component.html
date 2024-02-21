@@ -1,20 +1,22 @@
 <div class="container">
 <div> 
-  <img class="trach" src="assets/trash.png">  
-  <button class="align" ><a router-link="createworkflowComponent">Continuer</a></button>
+   
+  <button class="align" ><a (click)="ajoutWorkflow2()" >Continuer</a></button>
 </div>
 <form action="/submit" method="post">
-
-  <input type="text" id="nom" name="nom" required placeholder="Se connecter au 'Nom du workflow'">
+  <input type="text" id="nom" name="nom" [(ngModel)]="workflow.workflowName" required placeholder="Se connecter au 'Nom du workflow'">
   <label for="description">Informations</label>
-  <input type="text" id="description" name="description" required placeholder="Description">
+  <input type="text" id="description" name="description" [(ngModel)]="workflow.description" required placeholder="Description">
 
   <label for="responsable">Responsable :</label><br>
-  <select id="responsable" name="responsable">
-      <option value="Administrateur">Administrateur</option>
-      <option value="Responsable workflow">Responsable workflow</option>
-      <option value="Utilisateur">Utilisateur</option>
+  <select id="responsable" name="responsable" [(ngModel)]="workflow.responsible">
+    <option value="Administrateur">Administrateur</option>
+    <option value="Responsable workflow">Responsable workflow</option>
+    <option value="Utilisateur">Utilisateur</option>
   </select>
-
+  
 </form>
 </div> 
+
+
+
